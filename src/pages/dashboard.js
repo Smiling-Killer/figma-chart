@@ -159,7 +159,7 @@ class Dashboard extends Component {
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",
-          flex: 1,
+          
         }}
       >
         <div
@@ -198,21 +198,23 @@ class Dashboard extends Component {
 
   _renderHeader = () => {
     return (
-      <div
+      <div 
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           paddingBottom: "30px",
+          width:"100%"
         }}
       >
-        <div style={{ marginRight: "15px" }}>
+        <div>
           {this._renderButton(
             {
               border: "none",
               borderRadius: "5px",
               padding: "13px",
               backgroundColor: "#f4cc0b",
+              marginRight:"15px"
             },
             "Filter"
           )}
@@ -222,18 +224,18 @@ class Dashboard extends Component {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            flex: 1,
+            flex:0.60,
             marginRight: "15px",
           }}
         >
-          <div style={{ flex: 1, display: "flex", marginRight: "15px" }}>
+          <div style={{  display: "flex", marginRight: "15px" }}>
             {this._renderDropDown(this.columnList, "Column")}
           </div>
-          <div style={{ flex: 1, display: "flex" }}>
+          <div style={{ display: "flex"}}>
             {this._renderDropDown(this.rowList, "Row")}
           </div>
         </div>
-        <div>
+        <div style={{display:"flex",flex:"0.40"}}>
           {this._renderButton(
             {
               border: "none",
@@ -252,6 +254,7 @@ class Dashboard extends Component {
               padding: "13px",
               backgroundColor: "#f24b4b",
               color: "#fff",
+              marginRight:"20px"
             },
             "Export"
           )}
@@ -346,7 +349,8 @@ class Dashboard extends Component {
     return (
       <div
         style={{
-          height: "100%",
+          height: "100%vh",
+          width:"100%vw"
         }}
       >
         <Navbar />

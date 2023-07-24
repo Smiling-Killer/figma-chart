@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { FaUserCircle } from 'react-icons/fa';
 class Navbar extends Component {
   _renderMenu = () => {
     return (
@@ -47,6 +47,8 @@ class Navbar extends Component {
           alignItems: "center",
           justifyContent: "space-between",
           padding: "0 20px",
+          width:"100%"
+          
         }}
       >
         <div
@@ -61,7 +63,7 @@ class Navbar extends Component {
         </div>
         <div>
           <p style={{ padding: "10px 0 10px 0", color: "#fff", margin: 0 }}>
-            Monica Simons
+          <FaUserCircle size={30} />
           </p>
         </div>
       </div>
